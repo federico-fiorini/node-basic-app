@@ -1,0 +1,47 @@
+{
+  "name": "node-basic-app",
+  "version": "1.0.0",
+  "description": "Skeleton of a nodejs basic app using Express",
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "nodemon --watch src/ --watch config/ --exec babel-node -- src/server.js",
+    "test": "NODE_ENV=test mocha --compilers js:babel-core/register",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/federico-fiorini/node-basic-app.git"
+  },
+  "author": "Federico Fiorini",
+  "bugs": {
+    "url": "https://github.com/federico-fiorini/node-basic-app/issues"
+  },
+  "homepage": "https://github.com/federico-fiorini/node-basic-app#readme",
+  "dependencies": {
+    "babel-cli": "6.18.0",
+    "babel-core": "6.20.0",
+    "babel-eslint": "7.1.1",
+    "babel-plugin-module-resolver": "2.4.0",
+    "babel-plugin-transform-es2015-classes": "6.18.0",
+    "babel-polyfill": "6.20.0",
+    "babel-preset-env": "^1.6.0",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "chai": "^3.5.0",
+    "config": "^1.20.1",
+    "express": "^4.15.5",
+    "nodemon": "1.11.0",
+    "winston": "2.3.0"
+  },
+  "devDependencies": {
+    "eslint": "3.12.1",
+    "eslint-config-airbnb-base": "11.0.0",
+    "eslint-import-resolver-babel-module": "2.2.1",
+    "eslint-plugin-babel": "4.0.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-mocha": "4.7.0",
+    "mocha": "3.2.0",
+    "node-mocks-http": "^1.6.5",
+    "sinon": "^1.17.6"
+  }
+}

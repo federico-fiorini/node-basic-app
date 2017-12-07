@@ -1,0 +1,12 @@
+{
+    "presets": ["env"],
+    "plugins": [
+        ["module-resolver", {
+            "alias": {
+                "controllers": "./src/controllers",
+                "utils": "./src/utils"
+            }
+        }],
+        "babel-polyfill"
+    ]
+}
