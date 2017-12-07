@@ -6,3 +6,14 @@ Skeleton of a node.js basic app using:
 - Babel ESLint
 - ES6 syntax
 - Unit tests
+
+### How to use it
+
+    # Start the server
+    npm start
+
+    # ESLint check
+    npm run lint
+
+    # Run the tests
+    npm run test
