@@ -26,7 +26,7 @@ export const sendResponse = (res, statusCode, responseData) => {
     response.data = responseData;
   }
 
-  res.send(JSON.stringify(response));
+  res.json(response);
 };
 
 export const index = (req, res) => {

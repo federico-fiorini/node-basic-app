@@ -3,7 +3,7 @@ import { expect } from "chai";
 import { index } from "controllers";
 
 
-const res = { send: sinon.stub(), setHeader: sinon.stub(), status: sinon.stub() };
+const res = { json: sinon.stub(), setHeader: sinon.stub(), status: sinon.stub() };
 
 describe("Api", function() {
 
@@ -15,6 +15,6 @@ describe("Api", function() {
     await index(req, res);
     sinon.assert.calledWith(res.status, 200);
     sinon.assert.calledWith(res.setHeader, 'Content-Type', 'application/json');
-    sinon.assert.calledWith(res.send, JSON.stringify(expectedResponse));
+    sinon.assert.calledWith(res.json, expectedResponse);
   });
 });
