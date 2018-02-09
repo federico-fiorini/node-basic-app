@@ -1,14 +1,14 @@
 import express from "express";
 import winston from "winston";
-import config from "config";
-import { index } from "controllers";
 import bodyParser from "body-parser";
+import { setRoutes } from "routes";
 
 const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.listen(config.port, () => winston.info(`Listening port ${config.port}`));
+const port = process.env.PORT || 3000;
+app.listen(port, () => winston.info(`Listening port ${port}`));
 
-app.get("/api", index);
+setRoutes(app);

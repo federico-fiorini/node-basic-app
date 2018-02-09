@@ -1,20 +1,17 @@
 import sinon from "sinon";
-import { expect } from "chai";
-import { index } from "controllers";
+import { sendResponse } from "routes";
 
 
 const res = { json: sinon.stub(), setHeader: sinon.stub(), status: sinon.stub() };
 
-describe("Api", function() {
+describe("Routes", () => {
+  it("sendResponse should return response data and status Ok", async () => {
+    const responseData = { test: true };
+    const expectedResponse = { status: "Ok", data: responseData };
 
-  it("Should get status Ok", async () => {
-
-    const req = { params: { }, body: { } };
-    const expectedResponse = { status: "Ok" };
-
-    await index(req, res);
+    sendResponse(res, 200, responseData);
     sinon.assert.calledWith(res.status, 200);
-    sinon.assert.calledWith(res.setHeader, 'Content-Type', 'application/json');
+    sinon.assert.calledWith(res.setHeader, "Content-Type", "application/json");
     sinon.assert.calledWith(res.json, expectedResponse);
   });
 });

@@ -3,8 +3,7 @@
     "plugins": [
         ["module-resolver", {
             "alias": {
-                "controllers": "./src/controllers",
-                "utils": "./src/utils"
+                "routes": "./src/routes"
             }
         }],
         "babel-polyfill"
