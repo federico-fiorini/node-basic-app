@@ -7,7 +7,7 @@ Skeleton of a node.js basic app using:
 - ES6 syntax
 - Unit tests
 
-### [Advanced] How to use it
+### How to use it
 
     # Start the server
     npm start
